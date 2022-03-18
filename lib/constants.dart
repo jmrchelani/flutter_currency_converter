@@ -10,7 +10,7 @@ const kSubtitleSize = 18.0;
 
 const kDefaultPadding = 18.0;
 
-const API_KEY = '2f76c5323be7f2ee0e50d5a7';
+const API_KEY = 'ENTER_YOUR_API_KEY';
 const BASE_URL = 'v6.exchangerate-api.com/v6';
 const CURRENCIES_CODES_ENDPOINT = 'codes';
 const RATES_ENDPOINT = 'latest';
