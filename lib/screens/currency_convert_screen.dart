@@ -16,7 +16,8 @@ class ConvertCurrencyScreen extends StatelessWidget {
       ),
       backgroundColor: kBackgroundColor,
       body: FutureBuilder(
-        future: Provider.of<CurrenciesProvider>(context).fetchConversionData(),
+        future: Provider.of<CurrenciesProvider>(context).fetchConversionData(
+            Provider.of<CurrenciesProvider>(context).selectedCurrency!),
         builder: (c, s) {
           if (!s.hasData) {
             return const Center(

@@ -65,16 +65,20 @@ class SelectBaseCurrencyScreen extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
                           ),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
                         ),
                         Text(
                           data[i].fullName.length > 30
-                              ? data[i].fullName.substring(0, 30) + '...'
+                              ? data[i].fullName.substring(0, 25) + '...'
                               : data[i].fullName,
                           style: const TextStyle(
                             fontSize: 20,
                             // fontWeight: FontWeight.bold,
                             color: Colors.white,
                           ),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
                         ),
                       ],
                     ),

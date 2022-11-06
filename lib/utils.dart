@@ -31,16 +31,10 @@ Future<List<Currency>> getCurrenciesData() async {
 }
 
 Future<Map<String, dynamic>> getConversionRates(String currency) async {
+  print('http://$BASE_URL/$API_KEY/$RATES_ENDPOINT/$currency');
   var response = await http.get(
     Uri.parse(
-      'http://' +
-          BASE_URL +
-          '/' +
-          API_KEY +
-          '/' +
-          RATES_ENDPOINT +
-          '/' +
-          currency,
+      'http://$BASE_URL/$API_KEY/$RATES_ENDPOINT/$currency',
     ),
   );
   var jsonData = jsonDecode(response.body);

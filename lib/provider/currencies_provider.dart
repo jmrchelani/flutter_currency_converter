@@ -18,8 +18,8 @@ class CurrenciesProvider extends ChangeNotifier {
     return data;
   }
 
-  Future<Map<String, dynamic>?> fetchConversionData() async {
-    Map<String, dynamic> data = await getConversionRates(_selectedCurrency!);
+  Future<Map<String, dynamic>?> fetchConversionData(String currency) async {
+    Map<String, dynamic> data = await getConversionRates(currency);
     print(data);
     if (data == null || data.isEmpty) return null;
     // _currencies = data;
